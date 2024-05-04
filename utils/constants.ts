@@ -1,7 +1,7 @@
 export const ccipBridgeBaseSepolia =
-  "0x4117010F268Cd055B242b435A23F111371720eF9";
+  "0xC21A38478c3412e7253B79E6E1e9Cd3d15F5b73c";
 
-export const ccipBridgeOPSepolia = "0x039A8561E235cF960bfed66AAD74441E3594aBb4";
+export const ccipBridgeOPSepolia = "0xe69D08Ad3d88AA3D1d4827D5774c3152619a13f1";
 
 export const opinionTradingContractAddress =
   "0x06a7ca596b3be8a7E75d192D572Dc43AeD375C81";
