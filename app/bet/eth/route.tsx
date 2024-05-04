@@ -42,35 +42,38 @@ const handleRequest = frames(async (ctx) => {
   return {
     image: (
       <div
-        tw='flex flex-col items-center justify-center text-lime-200 w-full h-full'
+        tw="flex flex-col items-center justify-center text-lime-200 w-full h-full"
         style={{
           backgroundImage: `url('${process.env.HOST_URL}/frame.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <span tw='text-6xl'>{proposal.description}</span>
-        <span tw='text-2xl mt-4'>
+        <span tw="text-6xl">{proposal.description}</span>
+        <span tw="text-2xl mt-4">
           Verify with World ID to get 100% of your rewards
         </span>
       </div>
     ),
     buttons: [
       <Button
-        action='tx'
+        action="tx"
         target={`${process.env.HOST_URL}/tx/bet?option=1&id=${id}&currency=eth`}
         post_url={`${process.env.HOST_URL}/tx-success/bet?option=1`}
       >
         {`Bet on ${proposal.option1}`}
       </Button>,
       <Button
-        action='tx'
+        action="tx"
         target={`${process.env.HOST_URL}/tx/bet?option=2&id=${id}&currency=eth`}
         post_url={`${process.env.HOST_URL}/tx-success/bet?option=2`}
       >
         {`Bet on ${proposal.option2}`}
       </Button>,
-      <Button action='link' target={"https://opinion-swap.vercel.com/trade"}>
+      <Button
+        action="link"
+        target={"https://opinion-swap.vercel.app/trade?chainId=84532"}
+      >
         World ID
       </Button>,
     ],
