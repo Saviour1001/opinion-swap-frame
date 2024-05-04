@@ -4,21 +4,20 @@ import { frames } from "../frames/frames";
 const handleRequest = frames(async (ctx) => {
   return {
     image: (
-      <div tw='flex items-center text-6xl justify-center w-full h-full bg-gray-100'>
+      <div tw='flex items-center text-6xl justify-center w-full h-full bg-gray-200'>
         Bridge USDC to Base using CCIP
       </div>
     ),
     buttons: [
       <Button
-        action='post'
-        target={{
-          query: { chain: "base" },
-          pathname: `${process.env.HOST_URL}/bridge`,
-        }}
+        action='tx'
+        target={`${process.env.HOST_URL}/tx/approve`}
+        post_url={`${process.env.HOST_URL}/tx-success/approve`}
       >
-        Bridge USDC to Base from OP
+        Approve USDC
       </Button>,
     ],
+    textInput: "Enter amount in USDC",
   };
 });
 
